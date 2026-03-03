@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trenuri - Trafic Feroviar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+  <!-- Navbar-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">Trafic Feroviar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a class="nav-link" href="tren.html">Tren</a></li>
+      <li class="nav-item"><a class="nav-link" href="rute-trenuri.html">Rute Trenuri</a></li>
+      <li class="nav-item"><a class="nav-link" href="statie.html">Stație</a></li>
+      <li class="nav-item"><a class="nav-link" href="comenzi.html">Comenzi</a></li>
+      <li class="nav-item"><a class="nav-link" href="suport.html">Suport</a></li>
+    </ul>
+    <span class="navbar-text">
+      Nume Utilizator | email@test.com
+      <a href="contul-meu.html" class="btn btn-sm btn-primary ms-2">Profil</a>
+    </span>
+  </div>
+</nav>
+
+  <div class="container mt-4">
+    <!-- Tabelul trenurilor-->
+     <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nr Tren</th>
+      <th>Ruta</th>
+      <th>Ora Plecare</th>
+      <th>Ora Sosire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IR72</td>
+      <td>București – Arad</td>
+      <td>07:30</td>
+      <td>18:45</td>
+    </tr>
+    <tr>
+      <td>R123</td>
+      <td>Craiova – Timișoara</td>
+      <td>08:15</td>
+      <td>12:30</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

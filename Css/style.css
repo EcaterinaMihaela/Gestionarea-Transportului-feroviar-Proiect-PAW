@@ -1,0 +1,39 @@
+
+body {
+    background-color: rgb(249, 244, 244);
+}
+/* HERO SECTION */
+.hero-section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1504376379689-8d54347b26c3');
+  background-size: cover;
+  background-position: center;
+}
+
+/* SEARCH CARD */
+.search-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  width: 800px;
+  max-width: 95%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* BUTTON STYLE */
+.search-btn {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* NAVBAR */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 20px;
+}
