@@ -1,4 +1,4 @@
-#prevDay, #nextDay {
+#prevDay, #nextDay, button[type="submit"]  {
   border-radius: 0.5rem;       /* colțuri rotunjite */
   font-weight: 500;             /* text puțin mai bold */
   padding: 0.4rem 0.8rem;       /* padding vertical și orizontal */
@@ -8,8 +8,8 @@
   transition: background 0.3s;
 }
 
-#prevDay:hover, #nextDay:hover {
-  background-color: #1b1e21;    /* mai închis la hover */
+#prevDay:hover, #nextDay:hover, button[type="submit"]:hover {
+  background-color: #1b1e21;
   color: white;
 }
 

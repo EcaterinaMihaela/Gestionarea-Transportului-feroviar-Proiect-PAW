@@ -1,0 +1,30 @@
+/* TITLU PAGINA */
+h1{
+font-weight:600;
+margin-bottom:20px;
+}
+
+/* CARD CONT */
+.container{
+max-width:800px;
+}
+
+/* INFORMATII CONT */
+.container p{
+background:#f8f9fa;
+padding:12px 15px;
+border-radius:8px;
+margin-bottom:10px;
+font-size:16px;
+}
+
+/* LABELURI */
+.container strong{
+color:#25292d;
+}
+
+/* MIC EFECT LA HOVER PE INFO */
+.container p:hover{
+background:#e9ecef;
+transition:0.3s;
+}

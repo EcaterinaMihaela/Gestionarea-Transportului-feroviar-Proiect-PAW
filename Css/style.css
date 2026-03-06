@@ -1,35 +1,6 @@
-
+/* BODY GENERAL */
 body {
     background-color: rgb(249, 244, 244);
-}
-/* HERO SECTION */
-.hero-section {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('https://images.unsplash.com/photo-1504376379689-8d54347b26c3');
-  background-size: cover;
-  background-position: center;
-}
-
-/* SEARCH CARD */
-.search-card {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  width: 800px;
-  max-width: 95%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* BUTTON STYLE */
-.search-btn {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 10px;
 }
 
 /* NAVBAR */
@@ -38,13 +9,85 @@ body {
   font-size: 20px;
 }
 
-/* carduri in comenzi pt cumparare */
+/* CARDURI GENERALE */
 .card {
-    transition: all 0.3s ease;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .card {
+  background-color: #383838;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background-color: #000 !important;
+}
+
+/* placeholder vizibil în dark mode */
+.dark-mode input::placeholder,
+.dark-mode .form-control::placeholder {
+    color: #8d8686;  /* gri deschis, vizibil pe fundal închis */
+    opacity: 1;      /* unele browsere au opacitate mică implicit */
+}
+
+.dark-mode .list-group-item {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .search-card {
+    background-color: #383838; /* gri închis */
+    color: white;
+}
+
+.dark-mode .search-card input::placeholder {
+    color: #8d8686;
+}
+
+/*buton "profil" */
+.btn-profile {
+    background-color: #3b3a3a;   
+    color: white;
+    border-radius: 12px;         /* colțuri rotunjite */
+    padding: 5px 14px;           /* mai elegant */
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);  /* mic shadow */
+    transition: all 0.3s ease;
+}
+
+.btn-profile:hover {
+    background-color: #71787e;   /* mai închis la hover */
+    color: white;
+    transform: translateY(-2px); /* efect mic de ridicare */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Buton Dark Mode - similar cu Profil */
+.btn-darkmode {
+    background-color: #3b3a3a;   /* culoare ca profil */
+    color: white;                /* text alb */
+    border-radius: 12px;         /* colțuri rotunjite */
+    padding: 5px 14px;           /* mai elegant */
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-darkmode:hover {
+    background-color: #71787e;   /* mai deschis la hover */
+    color: white;                /* text rămâne alb */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }

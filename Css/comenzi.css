@@ -1,0 +1,26 @@
+h1{
+font-weight:600;
+}
+
+.card h4{
+margin-bottom:10px;
+}
+
+/* Stil butoane carduri mai închise */
+.btn-card {
+    background-color: #000000;   /* culoare mai închisă */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #000;      /* și mai închis la hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    color: white;
+}

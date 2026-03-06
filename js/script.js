@@ -1,22 +1,17 @@
-document.getElementById("searchForm").addEventListener("submit", function(e) {
-    e.preventDefault();
 
-    let plecare = document.getElementById("plecare").value;
-    let sosire = document.getElementById("sosire").value;
-    let data = document.getElementById("data").value;
+//dark mode
+const toggle = document.getElementById("darkModeToggle");
 
-    if(plecare === "" || sosire === "" || data === "") {
-        alert("Te rog completează toate câmpurile!");
-        return;
-    }
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 
-    if(plecare === sosire) {
-        alert("Stația de plecare și sosire nu pot fi identice!");
-        return;
-    }
-
-    alert("Căutare realizată cu succes!\n" +
-          "Plecare: " + plecare + "\n" +
-          "Sosire: " + sosire + "\n" +
-          "Data: " + data);
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "on");
+  } else {
+    localStorage.setItem("darkMode", "off");
+  }
 });
+
+if (localStorage.getItem("darkMode") === "on") {
+  document.body.classList.add("dark-mode");
+}

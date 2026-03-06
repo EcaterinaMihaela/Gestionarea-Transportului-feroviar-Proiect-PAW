@@ -1,0 +1,38 @@
+.hero-section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1504376379689-8d54347b26c3');
+  background-size: cover;
+  background-position: center;
+}
+
+.search-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  width: 800px;
+  max-width: 95%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.search-btn {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #1f1d1d; /* negru închis */
+  color: #fff;
+  border: none;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+  background-color: #0d0d0d; /* și mai închis la hover */
+  color: #fff;
+}
+
+
+
