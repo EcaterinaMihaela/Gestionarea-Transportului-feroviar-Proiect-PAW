@@ -1,0 +1,26 @@
+#prevDay, #nextDay {
+  border-radius: 0.5rem;       /* colțuri rotunjite */
+  font-weight: 500;             /* text puțin mai bold */
+  padding: 0.4rem 0.8rem;       /* padding vertical și orizontal */
+  font-size: 14px;
+  background-color: #25292d;    /* culoare de bază */
+  color: white;
+  transition: background 0.3s;
+}
+
+#prevDay:hover, #nextDay:hover {
+  background-color: #1b1e21;    /* mai închis la hover */
+  color: white;
+}
+
+.card{
+border-radius:10px;
+}
+
+h1{
+font-weight:600;
+}
+h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
