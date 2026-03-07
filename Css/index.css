@@ -7,32 +7,67 @@
               url('https://images.unsplash.com/photo-1504376379689-8d54347b26c3');
   background-size: cover;
   background-position: center;
+  color: white;
 }
 
-.search-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 15px;
-  width: 800px;
-  max-width: 95%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* HOME SECTIONS */
+
+.home-section {
+  margin-top: 60px;
 }
 
-.search-btn {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px;
+.section-title {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* NEWS */
+
+.news-card {
+  background: white;
+  padding: 25px;
   border-radius: 10px;
-  background-color: #1f1d1d; /* negru închis */
-  color: #fff;
-  border: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  height: 100%;
+  transition: transform 0.2s;
 }
 
-.search-btn:hover,
-.search-btn:focus {
-  background-color: #0d0d0d; /* și mai închis la hover */
-  color: #fff;
+.news-card:hover {
+  transform: translateY(-5px);
 }
 
+/* QUICK LINKS */
 
+.home-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+}
+
+/* INFO BOX */
+
+.info-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.info-box {
+  background: #e9f2ff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+}
 

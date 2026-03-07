@@ -47,15 +47,6 @@ body {
   color: white;
 }
 
-/*pt placeholdere din index.html */
-.dark-mode .search-card {
-    background-color: #383838; /* gri închis */
-    color: white;
-}
-
-.dark-mode .search-card input::placeholder {
-    color: #8d8686;
-}
 /*pt placeholdere din contul meu.html sa se vada la dark mode*/
 .dark-mode .accout-info{
     background-color: #383838; /* gri închis */
@@ -63,6 +54,27 @@ body {
 }
 .dark-mode .accout-info input::placeholder {
     color: #8d8686;
+}
+
+/* HOME PAGE - DARK MODE */
+
+.dark-mode .news-card {
+  background-color: #383838;
+  color: white;
+}
+
+.dark-mode .link-card {
+  background-color: #383838;
+  color: white;
+}
+
+.dark-mode .section-title {
+  color: white;
+}
+
+.dark-mode .info-box {
+  background-color: #1e1e1e;
+  color: white;
 }
 
 /*buton "profil" */

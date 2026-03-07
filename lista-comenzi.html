@@ -35,6 +35,7 @@
 
                     <a id="profilBtn" href="contul-meu.html" class="btn btn-profile btn-sm ms-2">Profil</a>
 
+                    <button id="logoutBtn" class="btn btn-danger btn-sm ms-2">Logout</button>
                     <button id="darkModeToggle" class="btn btn-darkmode btn-sm ms-2">
                         🌙 Dark
                     </button>
@@ -87,73 +88,7 @@
     </div>
 
 
-    <script>
-
-        const comenzi = [
-            {
-                id: 34532897,
-                cumparat: "2026-03-06",
-                calatorie: "2026-03-06",
-                plecare: "Craiova",
-                destinatie: "Strehaia"
-            },
-
-            {
-                id: 34520607,
-                cumparat: "2026-03-05",
-                calatorie: "2026-03-07",
-                plecare: "Craiova",
-                destinatie: "Strehaia"
-            }
-        ];
-
-
-        function afiseaza(lista) {
-
-            const tabel = document.getElementById("tabelComenzi");
-            tabel.innerHTML = "";
-
-            lista.forEach(c => {
-
-                tabel.innerHTML += `
-<tr>
-<td>${c.id}</td>
-<td>${c.cumparat}</td>
-<td>${c.calatorie}</td>
-<td>${c.plecare}</td>
-<td>${c.destinatie}</td>
-</tr>
-`;
-
-            });
-
-        }
-
-
-        function filtreaza() {
-
-            const start = document.getElementById("dataStart").value;
-            const end = document.getElementById("dataEnd").value;
-
-            if (!start && !end) {
-                afiseaza(comenzi);
-                return;
-            }
-
-            const filtrate = comenzi.filter(c => {
-
-                return (!start || c.cumparat >= start) &&
-                    (!end || c.cumparat <= end);
-
-            });
-
-            afiseaza(filtrate);
-
-        }
-
-        afiseaza(comenzi);
-
-    </script>
+    
     <script src="js/script.js"></script>
     <script src="js/lista-comenzi.js"></script>
 </body>

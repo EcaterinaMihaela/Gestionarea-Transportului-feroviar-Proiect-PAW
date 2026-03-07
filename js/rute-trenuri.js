@@ -75,3 +75,37 @@ document.getElementById("searchRouteForm").addEventListener("submit", function(e
     alert("Căutare realizată cu succes!\nData: " + date);
   }
 });
+
+//selectare ruta dorita pt a cumpara bilet
+document.addEventListener("DOMContentLoaded", function () {
+
+  const routeList = document.getElementById("routeList");
+
+  // verificare logat
+  const userLogat = localStorage.getItem("nume");
+
+  if (routeList) {
+    routeList.addEventListener("click", function (e) {
+      if (e.target && e.target.nodeName === "LI") {
+        const ruta = e.target.textContent;
+
+        if (!userLogat) {
+          alert("Trebuie să fii logat pentru a cumpăra bilete!");
+          window.location.href = "login.html";
+          return;
+        }
+
+        // salvam comanda in localStorage
+        let comenzi = JSON.parse(localStorage.getItem("comenzi")) || [];
+        comenzi.push({
+          ruta: ruta,
+          data: document.getElementById("travelDate").value || "Azi"
+        });
+        localStorage.setItem("comenzi", JSON.stringify(comenzi));
+
+        alert("Comanda a fost adăugată cu succes!");
+      }
+    });
+  }
+
+});
