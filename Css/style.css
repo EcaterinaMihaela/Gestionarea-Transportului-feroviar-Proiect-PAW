@@ -47,12 +47,21 @@ body {
   color: white;
 }
 
+/*pt placeholdere din index.html */
 .dark-mode .search-card {
     background-color: #383838; /* gri închis */
     color: white;
 }
 
 .dark-mode .search-card input::placeholder {
+    color: #8d8686;
+}
+/*pt placeholdere din contul meu.html sa se vada la dark mode*/
+.dark-mode .accout-info{
+    background-color: #383838; /* gri închis */
+    color: rgb(96, 94, 94);
+}
+.dark-mode .accout-info input::placeholder {
     color: #8d8686;
 }
 

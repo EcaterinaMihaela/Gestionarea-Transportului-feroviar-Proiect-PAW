@@ -28,22 +28,28 @@
           <li class="nav-item"><a class="nav-link" href="suport.html">Suport</a></li>
         </ul>
 
-        <span class="navbar-text">
-          Nume Utilizator | email@test.com
-          <a href="contul-meu.html" class="btn btn-profile btn-sm ms-2">Profil</a>
+        <span class="navbar-text" id="userSection">
+
+          <span id="userName"></span>
+          <span id="userEmail"></span>
+
+          <a id="profilBtn" href="contul-meu.html" class="btn btn-profile btn-sm ms-2">Profil</a>
+
+          <button id="logoutBtn" class="btn btn-danger btn-sm ms-2">Logout</button>
           <button id="darkModeToggle" class="btn btn-darkmode btn-sm ms-2">
             🌙 Dark
           </button>
+
         </span>
       </div>
     </div>
   </nav>
 
   <div class="container mt-5">
-    <div class="card p-4 shadow-sm">
-      <h1 class="mb-3">Contul Meu</h1>
-      <p><strong>Nume:</strong> Nume Utilizator</p>
-      <p><strong>Email:</strong> email@test.com</p>
+    <h1 class="mb-3">Contul Meu</h1>
+    <div class="card p-4 shadow-sm accout-info">
+      <p><strong>Nume:</strong> <span id="accountName">Ecaterina-Mihaela Capatina</span></p>
+      <p><strong>Email:</strong> <span id="accountEmail">ecaterinamihaelacapatina@gmail.com</span></p>
       <p><strong>Trenuri preferate:</strong> IR72, R123</p>
     </div>
   </div>

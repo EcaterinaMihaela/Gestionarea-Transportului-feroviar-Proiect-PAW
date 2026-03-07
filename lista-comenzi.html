@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista comenzilor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Trafic Feroviar</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="tren.html">Tren</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rute-trenuri.html">Rute Trenuri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="statie.html">Stație</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="comenzi.html">Comenzi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="suport.html">Suport</a></li>
+                </ul>
+
+                <span class="navbar-text" id="userSection">
+
+                    <span id="userName"></span>
+                    <span id="userEmail"></span>
+
+                    <a id="profilBtn" href="contul-meu.html" class="btn btn-profile btn-sm ms-2">Profil</a>
+
+                    <button id="darkModeToggle" class="btn btn-darkmode btn-sm ms-2">
+                        🌙 Dark
+                    </button>
+
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <h2>Lista comenzilor</h2>
+
+        <div class="row mb-4">
+
+            <div class="col-md-3">
+                <label>De la:</label>
+                <input type="date" id="dataStart" class="form-control">
+            </div>
+
+            <div class="col-md-3">
+                <label>Până la:</label>
+                <input type="date" id="dataEnd" class="form-control">
+            </div>
+
+            <div class="col-md-2 d-flex align-items-end">
+                <button class="btn btn-primary" onclick="filtreaza()">Caută</button>
+            </div>
+
+        </div>
+
+
+        <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th>ID bilet</th>
+                    <th>Cumpărat în</th>
+                    <th>Călătorie în</th>
+                    <th>De la</th>
+                    <th>Până la</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelComenzi">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script>
+
+        const comenzi = [
+            {
+                id: 34532897,
+                cumparat: "2026-03-06",
+                calatorie: "2026-03-06",
+                plecare: "Craiova",
+                destinatie: "Strehaia"
+            },
+
+            {
+                id: 34520607,
+                cumparat: "2026-03-05",
+                calatorie: "2026-03-07",
+                plecare: "Craiova",
+                destinatie: "Strehaia"
+            }
+        ];
+
+
+        function afiseaza(lista) {
+
+            const tabel = document.getElementById("tabelComenzi");
+            tabel.innerHTML = "";
+
+            lista.forEach(c => {
+
+                tabel.innerHTML += `
+<tr>
+<td>${c.id}</td>
+<td>${c.cumparat}</td>
+<td>${c.calatorie}</td>
+<td>${c.plecare}</td>
+<td>${c.destinatie}</td>
+</tr>
+`;
+
+            });
+
+        }
+
+
+        function filtreaza() {
+
+            const start = document.getElementById("dataStart").value;
+            const end = document.getElementById("dataEnd").value;
+
+            if (!start && !end) {
+                afiseaza(comenzi);
+                return;
+            }
+
+            const filtrate = comenzi.filter(c => {
+
+                return (!start || c.cumparat >= start) &&
+                    (!end || c.cumparat <= end);
+
+            });
+
+            afiseaza(filtrate);
+
+        }
+
+        afiseaza(comenzi);
+
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/lista-comenzi.js"></script>
+</body>
+
+</html>
