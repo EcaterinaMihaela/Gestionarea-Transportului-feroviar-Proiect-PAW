@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       tabelBilete.innerHTML += `
         <tr>
           <td>${index + 1}</td>
-          <td>${c.cumparat || "-"}</td>
+          <td>${c.data || dataCurenta()}</td>
           <td>${c.data || "-"}</td>
           <td>${c.plecare || c.ruta?.split(":")[1]?.split("–")[0]?.trim() || "-"}</td>
           <td>${c.destinatie || c.ruta?.split("–")[1]?.trim() || "-"}</td>
@@ -42,8 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <td>${c.data}</td>
           <td>${c.plecare}</td>
           <td>${c.destinatie}</td>
-          <td>${c.zile} zile
+          <td>
             <button class="btn btn-sm btn-danger deleteBtn" data-index="${index}" data-tip="abonament">Șterge</button>
+            ${c.zile} zile
           </td>
         </tr>
       `;
@@ -100,3 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
   afiseaza(comenzi);
 
 });
+
+// obține data curentă în formatul YYYY-MM-DD
+function dataCurenta() {
+    const azi = new Date();
+    const yyyy = azi.getFullYear();
+    const mm = String(azi.getMonth() + 1).padStart(2, '0'); // luna începe de la 0
+    const dd = String(azi.getDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+}

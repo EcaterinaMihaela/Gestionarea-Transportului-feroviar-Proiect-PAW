@@ -1,114 +1,91 @@
-/* BODY GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 body {
-    background-color: rgb(249, 244, 244);
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
 }
 
 /* NAVBAR */
-.navbar-brand {
-  font-weight: bold;
-  font-size: 20px;
+.navbar-brand { font-weight: bold; font-size: 20px; }
+
+/* NAVBAR FIX */
+.navbar {
+    position:sticky;      /* rămâne la scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;        /* deasupra hero-ului și a altor elemente */
+    transition: background 0.3s ease;
 }
 
+
+/* body padding ca să nu acopere navbar-ul conținutul */
+body {
+    padding-top: 70px;    /* ajustează în funcție de înălțimea navbar-ului */
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+}
 /* CARDURI GENERALE */
 .card {
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* DARK MODE */
-.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode .card {
-  background-color: #383838;
-  color: white;
-}
-
-.dark-mode .navbar {
-  background-color: #000 !important;
-}
-
-/* placeholder vizibil în dark mode */
-.dark-mode input::placeholder,
-.dark-mode .form-control::placeholder {
-    color: #8d8686;  /* gri deschis, vizibil pe fundal închis */
-    opacity: 1;      /* unele browsere au opacitate mică implicit */
-}
-
-.dark-mode .list-group-item {
-  background-color: #1e1e1e;
-  color: white;
-}
-
-/*pt placeholdere din contul meu.html sa se vada la dark mode*/
-.dark-mode .accout-info{
-    background-color: #383838; /* gri închis */
-    color: rgb(96, 94, 94);
-}
-.dark-mode .accout-info input::placeholder {
-    color: #8d8686;
-}
-
-/* HOME PAGE - DARK MODE */
-
-.dark-mode .news-card {
-  background-color: #383838;
-  color: white;
-}
-
-.dark-mode .link-card {
-  background-color: #383838;
-  color: white;
-}
-
-.dark-mode .section-title {
-  color: white;
-}
-
-.dark-mode .info-box {
-  background-color: #1e1e1e;
-  color: white;
-}
-
-/*buton "profil" */
-.btn-profile {
-    background-color: #3b3a3a;   
-    color: white;
-    border-radius: 12px;         /* colțuri rotunjite */
-    padding: 5px 14px;           /* mai elegant */
-    font-weight: 500;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);  /* mic shadow */
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
-.btn-profile:hover {
-    background-color: #71787e;   /* mai închis la hover */
-    color: white;
-    transform: translateY(-2px); /* efect mic de ridicare */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Buton Dark Mode - similar cu Profil */
-.btn-darkmode {
-    background-color: #3b3a3a;   /* culoare ca profil */
-    color: white;                /* text alb */
-    border-radius: 12px;         /* colțuri rotunjite */
-    padding: 5px 14px;           /* mai elegant */
+/* BUTOANE GENERALE */
+.btn-profile, .btn-darkmode {
+    background-color: #3b3a3a;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 14px;
     font-weight: 500;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
-.btn-darkmode:hover {
-    background-color: #71787e;   /* mai deschis la hover */
-    color: white;                /* text rămâne alb */
+.btn-profile:hover, .btn-darkmode:hover {
+    background-color: #71787e;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* DARK MODE GENERAL */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card { background-color: #383838; color: white; }
+.dark-mode .navbar { background-color: #000 !important; }
+
+
+
+.hero-section {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(120deg, rgba(9, 9, 9, 0.8), rgba(154, 152, 152, 0.8)), url('https://images.unsplash.com/photo-1504376379689-8d54347b26c3?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.91);
+}
+
+
+.dark-mode .hero-section {
+    background: linear-gradient(120deg, #000000, #525252);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 4px 15px rgb(99, 99, 99);
 }

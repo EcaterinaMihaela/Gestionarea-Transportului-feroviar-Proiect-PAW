@@ -1,73 +1,125 @@
-.hero-section {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('https://images.unsplash.com/photo-1504376379689-8d54347b26c3');
-  background-size: cover;
-  background-position: center;
-  color: white;
+
+.welcome-box {
+    position: relative;
+    z-index: 1;
 }
 
-/* HOME SECTIONS */
+.welcome-box h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
 
+/*HOME SECTION*/
 .home-section {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 
+/* SECTION TITLES */
 .section-title {
-  margin-bottom: 25px;
-  font-weight: 600;
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-/* NEWS */
-
-.news-card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  height: 100%;
-  transition: transform 0.2s;
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: #0d6efd;
+    border-radius: 2px;
 }
 
-.news-card:hover {
-  transform: translateY(-5px);
+/* CARDS (NEWS / LINK)*/
+.news-card,
+.link-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: white;
+    border-radius: 10px;
 }
 
-/* QUICK LINKS */
+.news-card:hover,
+.link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.495);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-card .card-img-top,
+.link-card .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .card-img-top,
+.link-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body-custom {
+    padding: 20px;
+}
+
+.link-card .card-body-custom {
+    text-align: center;
+    padding: 30px 20px;
+}
 
 .home-link {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
-.link-card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.link-card:hover {
-  transform: translateY(-5px);
-}
-
-/* INFO BOX */
-
+/* INFO SECTION */
 .info-section {
-  margin-top: 60px;
-  margin-bottom: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .info-box {
-  background: #e9f2ff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 16px;
+    background: #e9f2ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    border-left: 5px solid #0d6efd;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* DARK MODE STYLES */
+.dark-mode .news-card,
+.dark-mode .link-card {
+    background-color: #383838;
+    color: white;
+    border: 1px solid #444;
+}
+
+.dark-mode .section-title {
+    color: white;
+}
+
+.dark-mode .section-title::after {
+    background: #4dabf7;
+}
+
+.dark-mode .info-box {
+    background-color: #1e1e1e;
+    color: white;
+    border-left-color: #4dabf7;
+}

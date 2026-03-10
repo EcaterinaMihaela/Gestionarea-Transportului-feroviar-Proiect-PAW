@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stații</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/statii.css">
+</head>
+
+<body>
+
+  <!--nav bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Trafic Feroviar</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="trenuri.html">Trenuri</a></li>
+          <li class="nav-item"><a class="nav-link" href="rute-trenuri.html">Rute+Cumpară</a></li>
+          <li class="nav-item"><a class="nav-link active" href="statii.html">Stații</a></li>
+          <li class="nav-item"><a class="nav-link" href="comenzi.html">Comenzi</a></li>
+          <li class="nav-item"><a class="nav-link" href="suport.html">Suport</a></li>
+        </ul>
+
+        <span class="navbar-text" id="userSection">
+          <span id="userName"></span>
+          <span id="userEmail"></span>
+          <a id="profilBtn" href="contul-meu.html" class="btn btn-profile btn-sm ms-2">Profil</a>
+          <button id="logoutBtn" class="btn btn-danger btn-sm ms-2">Logout</button>
+          <button id="darkModeToggle" class="btn btn-darkmode btn-sm ms-2">🌙 Dark</button>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-section shadow-sm">
+    <div class="container text-center">
+      <div class="hero-content-small py-4">
+        <h1 class="display-5 fw-bold">Rețeaua de Stații</h1>
+        <p class="lead">Explorează principalele noduri feroviare pe harta interactivă.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4 mb-5">
+    <!-- LISTA RUTE -->
+    <div class="mt-4">
+      <h3>Alegeți ruta dorită pentru a vedea statiile disponibile:</h3>
+      <ul class="list-group mt-3" id="routeList">
+        <li class="list-group-item">IR72: București Nord – Arad</li>
+        <li class="list-group-item">R123: Craiova – Timișoara Nord</li>
+        <li class="list-group-item">R200: București Nord – Cluj Napoca</li>
+        <li class="list-group-item">IR1591: București Nord – Craiova</li>
+      </ul>
+    </div>
+
+    <!--harta-->
+    <div class="container mt-5 mb-5">
+      <h5>Ruta curenta:Bucuresti Nord-Craiova:</h5>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-0">
+              <div id="map" style="height: 500px; border-radius: 10px;"></div>
+            </div>
+          </div>
+        </div>
+        <!---->
+
+        <div class="col-lg-4">
+          <h4 class="mb-3 section-title">Stații Principale</h4>
+          <div class="list-group shadow-sm">
+            <button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+              onclick="focusStation(44.447, 26.075)">
+              <span>📍 București Nord</span>
+              <span class="badge bg-primary rounded-pill">Principal</span>
+            </button>
+            <button class="list-group-item list-group-item-action" onclick="focusStation(44.277, 25.525)">📍
+              Videle</button>
+            <button class="list-group-item list-group-item-action" onclick="focusStation(44.111, 24.966)">📍 Roșiori
+              Nord</button>
+            <button class="list-group-item list-group-item-action" onclick="focusStation(44.113, 24.345)">📍
+              Caracal</button>
+            <button class="list-group-item list-group-item-action" onclick="focusStation(44.329, 23.812)">📍
+              Craiova</button>
+          </div>
+          <div class="info-box mt-4">
+            💡 Click pe o stație din listă pentru a o localiza rapid pe hartă.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/statii.js"></script>
+
+</body>
+
+</html>

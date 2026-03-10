@@ -1,0 +1,210 @@
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+
+.dark-mode .contact-card:hover .icon-circle {
+    background: #fff;
+    /* În Dark Mode, cercul devine alb la hover */
+}
+
+.contact-card:hover .icon-circle {
+    background: #0d6efd;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.3);
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .contact-card {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .form-select,
+.dark-mode textarea {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: white;
+}
+
+.dark-mode .icon-circle {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .text-muted {
+    color: #aaa !important;
+}
+
+
+
+
+
+/* --- STILIZARE SPECIFICĂ FORMULAR SUPORT (Minimalist Black & White) --- */
+
+/* Cardul care conține formularul */
+.col-12.mt-5 .card {
+    background-color: #ffffff;
+    border: 2px solid #000000 !important;
+    /* Chenar negru solid */
+    border-radius: 0px;
+    /* Colțuri drepte pentru aspect modern */
+    transition: all 0.3s ease;
+}
+
+/* Culoare gri pentru placeholder în Light Mode (pe fundal alb) */
+input::placeholder,
+textarea::placeholder {
+    color: #888888 !important;
+    /* Un gri mediu vizibil */
+    opacity: 1;
+}
+
+/* Titlul din interiorul formularului */
+.section-title {
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #000;
+    /* Linia de sub titlu neagră */
+}
+
+/* Câmpurile de input, select și textarea */
+.form-control,
+.form-select {
+    border: 1px solid #000000;
+    border-radius: 0px;
+    /* Pătrate */
+    padding: 12px;
+    color: #000;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Butonul de trimitere */
+.btn-primary {
+    background-color: #000000 !important;
+    border: 1px solid #000000 !important;
+    color: #ffffff !important;
+    border-radius: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* --- ADAPTARE DARK MODE (Doar pentru formular) --- */
+.dark-mode .col-12.mt-5 .card {
+    background-color: #000000;
+    border-color: #ffffff !important;
+}
+
+.dark-mode .section-title {
+    color: #ffffff;
+}
+
+.dark-mode .section-title::after {
+    background: #ffffff;
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #1a1a1a;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.dark-mode .btn-primary {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+
+/* --- CONTACT CARDS (Cu margini punctate) --- */
+.contact-card {
+    background-color: #ffffff;
+    border: 2px dotted #000000 !important;
+    /* Margine punctată neagră */
+    border-radius: 15px;
+    /* Puțin rotunjite pentru contrast cu formularul */
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    border-style: solid;
+    /* Devine linie continuă la hover */
+    background-color: #fdfdfd;
+    transform: translateY(-5px);
+}
+
+/* --- DARK MODE SUPORT --- */
+.dark-mode .contact-card {
+    background-color: #111;
+    border-color: #ffffff !important;
+}
+
+/* Acțiunea când pui mouse-ul pe CERC direct */
+.icon-circle:hover {
+    background-color: #000000 !important;
+    /* Cercul se înnegrește */
+    transform: scale(1.2);
+    /* Crește puțin mai mult decât restul */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* Umbră fină */
+}
+
+/* Recomandat: Acțiunea pe cerc când pui mouse-ul oriunde pe CARD */
+.contact-card:hover .icon-circle {
+    background-color: #000000 !important;
+    transform: scale(1.1);
+    filter: none;
+    /* Asigură-te că NU e activ niciun filtru care face emoji-ul alb */
+}
+
+/* Efect pentru emoji (opțional) */
+.contact-card:hover .icon-circle {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Dă un pic de volum emoji-ului */
+}
+
+/* DARK MODE: Inversăm culorile la hover */
+.dark-mode .contact-card:hover .icon-circle {
+    background-color: #ffffff !important;
+    /* Cercul devine alb în Dark Mode */
+    color: #000000;
+}

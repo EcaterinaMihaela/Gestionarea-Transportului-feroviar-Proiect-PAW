@@ -1,0 +1,63 @@
+/* LIGHT MODE - tabel comenzi */
+table {
+    background-color: #fff; /* fundal alb pentru tabel */
+    color: #000; /* text negru */
+    border-color: #ddd; /* borduri subtile */
+    border-collapse: collapse; 
+}
+
+th {
+    background-color: #f8f9fa; /* header deschis */
+    color: #000;
+    border-color: #ddd;
+    padding: 10px;
+}
+
+td {
+    background-color: #fff; /* celule albe */
+    color: #000;
+    border-color: #ddd;
+    padding: 10px;
+    transition: all 0.3s ease; /* efect smooth la hover */
+}
+
+/* Hover pentru rânduri în light mode */
+tbody tr:hover {
+    background-color: #e9ecef; /* ușor gri la hover */
+    transform: translateY(-2px); /* ridicare ușoară */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* shadow subtil */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* DARK MODE - tabel comenzi */
+.dark-mode table {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #444;
+    border-collapse: collapse; /* să nu fie spații între celule */
+}
+
+.dark-mode th {
+    background-color: #2a2a2a;
+    color: white;
+    border-color: #444;
+    padding: 10px;
+}
+
+.dark-mode td {
+    background-color: #383838;
+    color: white;
+    border-color: #444;
+    padding: 10px;
+    transition: all 0.3s ease; /* pentru efect smooth la hover */
+}
+
+/* Hover pentru rânduri */
+.dark-mode tbody tr:hover {
+    background-color: #4a4a4a;
+    transform: translateY(-2px); /* ridicare ușoară */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer; /* arată că e interactiv */
+}

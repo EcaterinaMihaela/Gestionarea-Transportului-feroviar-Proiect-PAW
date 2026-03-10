@@ -1,30 +1,76 @@
 /* TITLU PAGINA */
-h1{
-font-weight:600;
-margin-bottom:20px;
+h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-/* CARD CONT 
-.container{
-max-width:800px;
-}*/
+/* CARD CONT */
+.accout-info {
+    background-color: #f0f0f0;
+    border: 3px dotted #000;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+/* hover pe cont */
+.accout-info:hover {
+    border-style: solid;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
 
 /* INFORMATII CONT */
-.container p{
-background:#f8f9fa;
-padding:12px 15px;
-border-radius:8px;
-margin-bottom:10px;
-font-size:16px;
+.container p {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 /* LABELURI */
-.container strong{
-color:#25292d;
+.container strong {
+    color: #1b1d1f;
 }
 
 /* MIC EFECT LA HOVER PE INFO */
-.container p:hover{
-background:#e9ecef;
-transition:0.3s;
+.container p:hover {
+    background: #e9ecef;
+    transition: 0.3s;
+}
+
+/*pt placeholdere din contul meu.html sa se vada la dark mode*/
+.dark-mode .accout-info {
+    background-color: #2e2d2d;
+    /* gri închis */
+    color: rgb(96, 94, 94);
+    border: 3px dotted #fffefe;
+}
+
+.dark-mode .accout-info:hover {
+    border-style: solid;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.dark-mode .accout-info input::placeholder {
+    color: #8d8686;
+}
+
+/* Buton Logout */
+.btn-logout {
+    border-radius: 12px;
+    /* colțuri rotunjite */
+    padding: 8px 20px;
+    /* mărime buton */
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    transform: translateY(-2px);
+    /* efect ridicare */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }

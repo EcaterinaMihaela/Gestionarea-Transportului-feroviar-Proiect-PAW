@@ -1,0 +1,102 @@
+
+/* Stil pentru lista de stații interactivă */
+.list-group-item-action {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 0 solid #000;
+    /* Schimbat în negru */
+}
+
+.list-group-item-action:hover {
+    border-left: 5px solid #000;
+    /* Accent negru la hover */
+    padding-left: 25px;
+    background-color: #f0f0f0;
+    /* Gri foarte deschis */
+    color: #000;
+}
+
+/* Suport Dark Mode pentru Hartă și Listă */
+.dark-mode #map {
+    filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.dark-mode .list-group-item-action {
+    background-color: #1a1a1a;
+    color: white;
+    border-color: #333;
+}
+
+.dark-mode .list-group-item-action:hover {
+    background-color: #ffffff;
+    /* Inversare totală la hover în dark mode */
+    color: #000;
+    border-left: 5px solid #ffffff;
+}
+
+/* Secțiunea de titlu stilizată */
+.section-title {
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: #000;
+    /* Titlu negru */
+}
+
+.dark-mode .section-title {
+    color: #fff;
+    /* Titlu alb în dark mode */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #000;
+    /* Linia de sub titlu neagră */
+}
+
+.dark-mode .section-title::after {
+    background: #fff;
+    /* Linia de sub titlu albă în dark mode */
+}
+
+/* Ajustare pentru badge-ul de "Principal" să fie tot negru */
+.badge.bg-primary {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.dark-mode .badge.bg-primary {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+
+/* Lista rute - dark mode */
+.dark-mode .list-group-item {
+    background-color: #1a1a1a;
+    color: white;
+    border-color: #333;
+}
+
+/* Hover pentru rute */
+.dark-mode .list-group-item:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+#routeList .list-group-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#routeList .list-group-item:hover {
+    background-color: #000;
+    color: #fff;
+    border-left: 5px solid #000;
+    padding-left: 25px;
+}

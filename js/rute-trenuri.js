@@ -44,11 +44,11 @@ function changeDate(days) {
   dateInput.valueAsDate = currentDate;
 }
 
-// click pe butoane
+// click pe butoane-scade/creste ziua
 prevBtn.addEventListener("click", () => changeDate(-1));
 nextBtn.addEventListener("click", () => changeDate(1));
 
-
+//cautarea unei rute in lista
 document.getElementById("searchRouteForm").addEventListener("submit", function(e){
   e.preventDefault();
 
@@ -76,6 +76,8 @@ document.getElementById("searchRouteForm").addEventListener("submit", function(e
   }
 });
 
+
+
 //selectare ruta dorita pt a cumpara bilet
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -86,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (routeList) {
     routeList.addEventListener("click", function (e) {
-      if (e.target && e.target.nodeName === "LI") {
-        const ruta = e.target.textContent;
+      if (e.target && e.target.nodeName === "LI") {         //daca e o ruta
+        const ruta = e.target.textContent;                  //textul rutei este preluat
 
         if (!userLogat) {
           alert("Trebuie să fii logat pentru a cumpăra bilete!");
@@ -95,12 +97,15 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
 
-        // salvam comanda in localStorage
+        // salvam comanda in localStorage,daca nu exista se creeaza un array gol
         let comenzi = JSON.parse(localStorage.getItem("comenzi")) || [];
+        //se adauga biletul in lista sub froma de json
         comenzi.push({
           ruta: ruta,
           data: document.getElementById("travelDate").value || "Azi"
         });
+
+        //dupa ce e adaugat,lista e salvata in browser,salvand lista intr un text
         localStorage.setItem("comenzi", JSON.stringify(comenzi));
 
         alert("Comanda a fost adăugată cu succes!");

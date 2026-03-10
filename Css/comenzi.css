@@ -1,26 +1,63 @@
-h1{
-font-weight:600;
+h2 {
+    font-weight: 600;       /* titluri mai groase */
 }
 
-.card h4{
-margin-bottom:10px;
+.card h4 {
+    margin-bottom: 10px;        /* spatiu sub titlu */
+    font-weight: 600;       
 }
 
-/* Stil butoane carduri mai închise */
+/* stil general al cardurilor */
+.card {
+    border: 3px dotted #000;
+    /* margine punctată */
+    border-radius: 12px;
+    /* colțuri puțin rotunjite */
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+/* efect cand trece mouse ul peste card */
+.card:hover {
+    border-style: solid;
+    /* devine solid la hover */
+    box-shadow: 0 20px 45px rgba(13, 109, 253, 0.295);
+    transform: translateY(-5px);
+}
+
+/* stil butoane din carduri*/
 .btn-card {
-    background-color: #000000;   /* culoare mai închisă */
+    background-color: #000000;
+    /* culoare mai închisă */
     color: white;
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
     font-weight: 500;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
 
+/* hover pe butoanele din carduri*/
 .btn-card:hover {
-    background-color: #000;      /* și mai închis la hover */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    background-color: #000;
+    /* și mai închis la hover */
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     color: white;
+}
+
+
+/* DARK MODE - CARDURI COMENZI */
+.dark-mode .card {
+    background-color: #333;
+    color: #fff;
+    border: 3px dotted #fff;
+}
+
+.dark-mode .card:hover {
+    border-style: solid;    /* devine solid la hover */
+    border-color: #ffffff;
+    box-shadow: 0 20px 45px rgba(13, 109, 253, 0.295);
 }

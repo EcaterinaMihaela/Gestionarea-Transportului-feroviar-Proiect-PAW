@@ -1,0 +1,40 @@
+#tabelTrenuri tr {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#tabelTrenuri tr:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.dark-mode #tabelTrenuri tr:hover {
+    background-color: #e3e1e1;
+    color: #000;
+}
+
+#tabelTrenuri tr:hover {
+    background-color: #000;
+    color: #fff;
+    border-left: 5px solid #000;
+}
+/* Dark mode tabel complet negru */
+.dark-mode #tabelTrenuri {
+    background-color: #000;
+    color: #fff;
+    border-color: #333;
+}
+
+.dark-mode #tabelTrenuri th,
+.dark-mode #tabelTrenuri td {
+    background-color: #00000067;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Hover în dark mode */
+.dark-mode #tabelTrenuri tr:hover {
+    background-color: #111; /* un negru puțin mai deschis ca să se vadă hover-ul */
+    color: #fff;
+    border-left: 5px solid #fff;
+}

@@ -1,26 +1,60 @@
-#prevDay, #nextDay, button[type="submit"]  {
-  border-radius: 0.5rem;       /* colțuri rotunjite */
-  font-weight: 500;             /* text puțin mai bold */
-  padding: 0.4rem 0.8rem;       /* padding vertical și orizontal */
+#prevDay,
+#nextDay,
+button[type="submit"] {
+  border-radius: 0.5rem;
+  /* colțuri rotunjite */
+  font-weight: 500;
+  /* text puțin mai bold */
+  padding: 0.4rem 0.8rem;
+  /* padding vertical și orizontal */
   font-size: 14px;
-  background-color: #25292d;    /* culoare de bază */
+  background-color: #25292d;
   color: white;
   transition: background 0.3s;
 }
 
-#prevDay:hover, #nextDay:hover, button[type="submit"]:hover {
-  background-color: #1b1e21;
+#prevDay:hover,
+#nextDay:hover,
+button[type="submit"]:hover {
+  background-color: #1b1e21;    /* culoare mai inchisa la hover */
   color: white;
 }
 
-.card{
-border-radius:10px;
+.card {
+  border-radius: 10px;
 }
 
-h1{
-font-weight:600;
+h2 {
+  font-weight: 600;
 }
+
 h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+
+/* Lista rute - dark mode */
+.dark-mode .list-group-item {
+  background-color: #1a1a1a;
+  color: white;
+  border-color: #333;
+}
+
+/* Hover pentru rute */
+.dark-mode .list-group-item:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+#routeList .list-group-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#routeList .list-group-item:hover {
+  background-color: #000;
+  color: #fff;
+  border-left: 5px solid #000;
+  padding-left: 25px;
 }
